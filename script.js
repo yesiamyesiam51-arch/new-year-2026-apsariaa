@@ -24,6 +24,15 @@ function saveAndNext() {
   answers.push(input.value || "—");
   nextPage();
 }
+// Resolutions Logic
+const res = document.querySelectorAll(".res");
+const btn = document.getElementById("promiseBtn");
+
+res.forEach(r => {
+  r.addEventListener("change", () => {
+    btn.disabled = ![...res].every(c => c.checked);
+  });
+});
 
 function showSummary() {
   const labels = [
