@@ -90,3 +90,28 @@ button {
   from { top: -10%; opacity: 1; }
   to { top: 110%; opacity: 0; }
 }
+/* Resolutions Page */
+.resolutions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.resolutions label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffd6f0; /* ensures visible on pink→black gradient */
+}
+
+.note {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 20px;
+  font-style: italic;
+}
