@@ -18,7 +18,6 @@ body {
   width: 100vw;
   padding: 40px;
   text-align: center;
-
   background: linear-gradient(135deg, #ff4f9a, #1a001f);
 }
 
@@ -36,7 +35,9 @@ h1, h2 {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 input {
@@ -49,20 +50,24 @@ input {
 }
 
 button {
-  padding: 12px 25px;
-  border: none;
+  padding: 12px 28px;
   border-radius: 30px;
-  background: #fff;
+  border: none;
+  background: white;
   color: #ff4f9a;
-  font-size: 1rem;
   cursor: pointer;
+}
+
+#summary {
+  text-align: left;
+  max-width: 700px;
 }
 
 /* HEARTS */
 .heart {
   position: fixed;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background: pink;
   transform: rotate(45deg);
   animation: fall 6s linear infinite;
@@ -71,30 +76,17 @@ button {
 .heart::before,
 .heart::after {
   content: '';
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background: pink;
   border-radius: 50%;
   position: absolute;
 }
 
-.heart::before {
-  top: -8px;
-  left: 0;
-}
-
-.heart::after {
-  left: -8px;
-  top: 0;
-}
+.heart::before { top: -7px; }
+.heart::after { left: -7px; }
 
 @keyframes fall {
-  from {
-    top: -10%;
-    opacity: 1;
-  }
-  to {
-    top: 110%;
-    opacity: 0;
-  }
+  from { top: -10%; opacity: 1; }
+  to { top: 110%; opacity: 0; }
 }
