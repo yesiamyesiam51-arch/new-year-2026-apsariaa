@@ -10,69 +10,115 @@
 </head>
 <body>
 
-<!-- HEARTS -->
 <div id="hearts"></div>
 
-<!-- PAGE 1 -->
+<!-- PAGE 1 : NAME -->
 <div class="page active">
-  <h1>Happy New Year Apsaria</h1>
-  <p>A little journey through our year 💖</p>
+  <h1>Before We Begin</h1>
+  <p>Tell me your name</p>
+  <input id="nameInput" placeholder="Your name..." />
+  <button onclick="saveName()">Continue</button>
+</div>
+
+<!-- WISH PAGE 1 -->
+<div class="page">
+  <h1>Happy New Year <span class="name"></span></h1>
+  <p>
+    As this year comes to an end,  
+    I just want you to know  
+    how special you’ve been to me.  
+    Not because of big moments,  
+    but because of the small ones.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- WISH PAGE 2 -->
+<div class="page">
+  <h1>From My Heart</h1>
+  <p>
+    This year wasn’t perfect,  
+    but it was real.  
+    And somewhere in between everything,  
+    you became comfort, calm, and familiarity.
+  </p>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- WISH PAGE 3 -->
+<div class="page">
+  <h1>Stepping Into 2026</h1>
+  <p>
+    I don’t wish for perfection.  
+    I wish for laughter, patience,  
+    understanding, and moments  
+    that feel warm even in silence.
+  </p>
   <button onclick="nextPage()">Start</button>
 </div>
 
-<!-- PAGE 2 -->
+<!-- QUESTIONS -->
 <div class="page">
-  <h2>Best Memory With Me?</h2>
-  <input placeholder="Type here..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Best memory with me?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 3 -->
 <div class="page">
-  <h2>Happiest Moment This Year?</h2>
-  <input placeholder="Type here..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Happiest moment of this year?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 4 -->
 <div class="page">
-  <h2>Saddest Moment?</h2>
-  <input placeholder="Type here..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Saddest moment?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 5 -->
 <div class="page">
-  <h2>Angriest Moment?</h2>
-  <input placeholder="Type here..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Angriest moment?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 6 -->
 <div class="page">
-  <h2>Favourite Song This Year?</h2>
-  <input placeholder="Song name..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Your favourite song this year?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 7 -->
 <div class="page">
-  <h2>Favourite Movie With Me?</h2>
-  <input placeholder="Movie name..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Favourite movie we watched together?</h2>
+  <input />
+  <button onclick="saveAndNext()">Next</button>
 </div>
 
-<!-- PAGE 8 -->
 <div class="page">
-  <h2>Your Special Wish For Me 💌</h2>
-  <input placeholder="Write from heart..." />
-  <button onclick="nextPage()">Next</button>
+  <h2>Your special wish for me</h2>
+  <input />
+  <button onclick="saveAndNext()">Finish</button>
 </div>
 
-<!-- PAGE 9 -->
+<!-- SUMMARY -->
 <div class="page">
-  <h1>Thank You For Being My 2025 💗</h1>
-  <p>Let’s make 2026 even more beautiful together.</p>
+  <h1>Your Year in Words</h1>
+  <div id="summary"></div>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page">
+  <h1>Thank You For Being My 2025 ❤️</h1>
+  <p>
+    This year will always stay close to my heart  
+    because you were part of it.
+
+    Let’s make 2026 even more beautiful —  
+    with more smiles, more understanding,  
+    and moments we’ll quietly remember.
+
+    I’m grateful for you.
+  </p>
 </div>
 
 <script src="script.js"></script>
